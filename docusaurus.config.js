@@ -28,8 +28,9 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: `${gitUser}`, // Usually your GitHub org/user name.
   projectName: `${gitRepo}`, // Usually your repo name.
-  onBrokenLinks: 'warn', // 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw', // 'throw',
+  onBrokenMarkdownLinks: 'throw',
+  onDuplicateRoutes: 'throw',
   trailingSlash: true,
   staticDirectories: ['static', 'public'],
   webpack: {
@@ -84,12 +85,13 @@ const config = {
           //   },
           // },
         },
-        blog: {
-          // showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl: `https://github.com/${gitUser}/${gitRepo}/tree/main/`,
-        },
+        blog: false,
+        // {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   // editUrl: `https://github.com/${gitUser}/${gitRepo}/tree/main/`,
+        // },
         // api: {
         //   path: "openapi.json",
         //   routeBasePath: "/apidocs",
